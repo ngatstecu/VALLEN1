@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buat Calon Cewek Aku 🗿</title>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:url("https://files.catbox.moe/wlwthl.jpg") center/cover no-repeat;
+  color:white;
+}
+
+.card{
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(12px);
+  padding:30px;
+  border-radius:25px;
+  text-align:center;
+  max-width:420px;
+  animation: fadeIn 1.3s ease;
+}
+
+h1{
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+p{
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+.highlight{
+  font-weight:600;
+}
+
+.btn{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+}
+
+button{
+  border:none;
+  padding:12px 22px;
+  border-radius:30px;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#yes{
+  background:#ff4d6d;
+  color:white;
+}
+
+#yes:hover{
+  transform:scale(1.1);
+}
+
+#no{
+  background:white;
+  color:#ff4d6d;
+  position:relative;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Hallo VALLENE COLLE ROSE KEYLA</h1>
+
+  <p>
+    semalam kan keyla panasaran aku mau nanyak apa  
+    lucu ga sih aku suka sama keyla, karna keyla tipe aku 🗿
+  </p>
+
+  <p>
+    jadi gini...
+    <br><br>
+    <span class="highlight">
+      keyla mau ga jadi cewekku?
+    </span>
+  </p>
+
+  <div class="btn">
+    <button id="yes">Mau ❤️</button>
+    <button id="no">Nggak 💔</button>
+  </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * 200 - 100;
+  const y = Math.random() * 200 - 100;
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+yesBtn.addEventListener("click", () => {
+  document.body.innerHTML = `
+  <div style="
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    animation: fadeIn 1s ease;
+  ">
+    <div>
+      <h1>Serius ni mau sama aku? </h1>
+      <p style="margin-top:15px;">
+        Kalau emang mau, langsung chat WhatsApp aku ya.
+      </p>
+      <br>
+      <a href="https://wa.me/6283190274543?text=iya%20keyla%20mau"
+         style="color:white; background:#25D366; padding:12px 20px;
+         border-radius:30px; text-decoration:none;">
+        Chat WhatsApp
+      </a>
+    </div>
+  </div>
+  `;
+});
+</script>
+
+</body>
+</html>
